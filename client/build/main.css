@@ -1,0 +1,28 @@
+.film_detail{
+    width: 90%;
+    height: 400px;
+    background: black;
+    border-radius: 15px;
+    border-color: red;
+    margin: auto;
+    padding: 10px;
+}
+.poster {
+    width: 150px;
+    height: 400px;
+    background: black;
+    float: left;
+}
+.info {
+    margin-left: 300px;
+    height: 360px;
+    background: ivory;
+    border-radius: 15px;
+    border-color: red;
+    padding: 10px;
+}
+#img {
+
+    border-radius: 15px;
+
+}

@@ -6,6 +6,10 @@ var ActorContainer = React.createClass({
   //When component is first created ( same as on conplete as android, winload on others )
   componentDidMount: function () {
     var url = 'http://netflixroulette.net/api/api.php?actor=Nicolas%20Cage';
+    this.makeRequest(url);
+  },
+
+  makeRequest: function(url) {
     var request = new XMLHttpRequest();
     request.open('GET', url);
 
@@ -19,6 +23,7 @@ var ActorContainer = React.createClass({
 
   },
 
+
   getInitialState: function () {
     return { actors: [], focusActor: null };
   },
@@ -26,10 +31,11 @@ var ActorContainer = React.createClass({
   render: function () {
     return (
       <div>
-        <h2>Netflix Container</h2>
+        <h2>Movies by Actor</h2>
         <ActorSelector 
         actors = {this.state.actors}  
-        didSelectActor={this.didSelectActor}/>
+        didSelectActor={this.didSelectActor}
+        makeRequest={this.makeRequest}/>
         <ActorDetail 
         actor = {this.state.focusActor}/>
       </div>
